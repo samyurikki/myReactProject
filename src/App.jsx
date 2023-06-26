@@ -22,7 +22,7 @@ function App() {
       <p>Age : {person.age}</p>
       <p>Hobby : {person.hobby}</p>
       <button onClick={displayPerson} className="btn btn-primary">
-        Show {person.name}
+        Show John
       </button>
     </div>
   );
