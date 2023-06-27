@@ -1,10 +1,49 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import "./index.css";
 import { data } from "./data";
 import Final from "./Final";
+import { User } from "./user";
+import { ConditionalRendering } from "./conditionalRendering";
+import { ToggleChallenge } from "./toggleChallenge";
 
 function App() {
+  return <ToggleChallenge />;
+}
+/*
+    USEEFFECT EXAMPLE CODE
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Use Effect Selected");
+  }, [count]);
+
+  const handleClick = () => {
+    console.log("ButtonClicked");
+    setTimeout(() => {
+      setCount((currCount) => {
+        const updatedCount = currCount + 1;
+        return updatedCount;
+      });
+    }, 3000);
+    // setCount((currentState) => {
+    //   const updatedState = currentState + 1;
+    //   return updatedState;
+    // });
+  };
+  return (
+    <>
+      <p>{count}</p>
+      <button className="btn btn-primary" type="button" onClick={handleClick}>
+        Increase
+      </button>
+    </>
+  );
+}*/
+
+/*function App() {
   const [person, setPerson] = useState({
     name: "Peter",
     age: 24,
@@ -26,13 +65,14 @@ function App() {
       </button>
     </div>
   );
-}
+}*/
 
 export default App;
 
 //USE STATE ARRAY EXAMPLE
 {
-  /*function App() {
+  /*
+  function App() {
   const [count, setCount] = useState(0);
 
   const func = () => {
@@ -46,7 +86,7 @@ export default App;
 
   return (
     <div>
-{/*       
+       
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>Increase count</button>
       <ul style={{ listStyleType: "none" }}>
@@ -62,7 +102,10 @@ export default App;
       <button onClick={() => removeItem([])} className="btn btn-warning">
         Clear All
       </button>
-       }
        
-      </div>*/
+       
+      </div>
+  )
+}
+*/
 }
